@@ -18,8 +18,8 @@ export default function ComplaintStatus() {
     setComplaint(null);
 
     const urls = [
-      `http://localhost:5000/api/complaints/search/${complaintId.trim()}`,
-      `http://localhost:5000/api/cyber-complaints/search/${complaintId.trim()}`
+      `https://helpforyou-backend.onrender.com/api/complaints/search/${complaintId.trim()}`,
+      `https://helpforyou-backend.onrender.com/api/cyber-complaints/search/${complaintId.trim()}`
     ];
 
     try {
