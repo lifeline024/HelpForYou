@@ -20,7 +20,7 @@ function PasswordReset() {
     
     setIsLoading(true);
     try {
-      const res = await axios.post(`http://localhost:5000/api/users/reset-password/${token}`, {
+      const res = await axios.post(`https://helpforyou-backend.onrender.com/api/users/reset-password/${token}`, {
         password,
       });
       setMessage(res.data.message);
