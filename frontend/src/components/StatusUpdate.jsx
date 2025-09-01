@@ -71,13 +71,13 @@ export default function UpdateComplaint() {
 
       try {
         res = await axios.get(
-          `http://localhost:5000/api/complaints/search/${complaintId.trim()}`
+          `https://helpforyou-backend.onrender.com/api/complaints/search/${complaintId.trim()}`
         );
         complaintType = "police";
       } catch (policeError) {
         try {
           res = await axios.get(
-            `http://localhost:5000/api/cyber-complaints/search/${complaintId.trim()}`
+            `https://helpforyou-backend.onrender.com/api/cyber-complaints/search/${complaintId.trim()}`
           );
           complaintType = "cyber";
         } catch (cyberError) {
@@ -113,9 +113,9 @@ export default function UpdateComplaint() {
     try {
       let url = "";
       if (complaintData.complaintType === "police") {
-        url = `http://localhost:5000/api/complaints/update-status/${complaintId}`;
+        url = `https://helpforyou-backend.onrender.com/api/complaints/update-status/${complaintId}`;
       } else {
-        url = `http://localhost:5000/api/cyber-complaints/update-status/${complaintId}`;
+        url = `https://helpforyou-backend.onrender.com/api/cyber-complaints/update-status/${complaintId}`;
       }
 
       const token = localStorage.getItem("token");
