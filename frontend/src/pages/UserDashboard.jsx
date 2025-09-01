@@ -21,7 +21,7 @@ const UserDashboard = () => {
       }
 
       const response = await axios.get(
-        'http://localhost:5000/api/complaints/my-complaints',
+        'https://helpforyou-backend.onrender.com/api/complaints/my-complaints',
         {
           headers: {
             'Authorization': `Bearer ${token}`
