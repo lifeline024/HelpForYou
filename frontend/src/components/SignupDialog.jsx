@@ -65,7 +65,7 @@ export default function SignupDialog({ onClose, onLoginSuccess }) {
     
     setIsLoading(true);
     try {
-      const response = await axios.post("http://localhost:5000/api/users/signup", {
+      const response = await axios.post("https://helpforyou-backend.onrender.com/api/users/signup", {
         name: formData.name,
         email: formData.email,
         mobile: formData.mobile,
