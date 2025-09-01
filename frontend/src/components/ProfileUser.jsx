@@ -36,7 +36,7 @@ const ProfilePage = () => {
 
   const fetchProfile = async () => {
     try {
-      const { data } = await axios.get("http://localhost:5000/api/users/profile", {
+      const { data } = await axios.get("https://helpforyou-backend.onrender.com/api/users/profile", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setProfile(data);
@@ -46,7 +46,7 @@ const ProfilePage = () => {
         if (data.profilePic.startsWith('http')) {
           setPreviewUrl(data.profilePic);
         } else {
-          setPreviewUrl(`http://localhost:5000/uploads/${data.profilePic}`);
+          setPreviewUrl(`https://helpforyou-backend.onrender.com/uploads/${data.profilePic}`);
         }
       }
     } catch (error) {
@@ -189,7 +189,7 @@ const ProfilePage = () => {
       if (profilePic) formData.append("profilePic", profilePic);
 
       const { data } = await axios.put(
-        "http://localhost:5000/api/users/profile",
+        "https://helpforyou-backend.onrender.com/api/users/profile",
         formData,
         {
           headers: {
@@ -209,7 +209,7 @@ const ProfilePage = () => {
         if (data.profile.profilePic.startsWith('http')) {
           setPreviewUrl(data.profile.profilePic);
         } else {
-          setPreviewUrl(`http://localhost:5000/uploads/${data.profile.profilePic}`);
+          setPreviewUrl(`https://helpforyou-backend.onrender.com/uploads/${data.profile.profilePic}`);
         }
       }
     } catch (error) {
