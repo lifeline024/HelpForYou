@@ -13,7 +13,7 @@ const app = express();
 
 // ------------------- MIDDLEWARE -------------------
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "https://helpforyou-frontend.onrender.com/",
+  origin: process.env.FRONTEND_URL || "https://helpforyou-frontend.onrender.com",
   credentials: true,
 }));
 app.use(express.json({ limit: '50mb' }));
