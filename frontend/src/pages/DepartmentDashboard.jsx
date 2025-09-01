@@ -102,10 +102,10 @@ const DepartmentDashboard = () => {
       let endpoint = '';
       if (department === 'police') {
         endpoint = district === 'All Districts' 
-          ? 'http://localhost:5000/api/complaints'
-          : `http://localhost:5000/api/complaints?district=${district}`;
+          ? 'https://helpforyou-backend.onrender.com/api/complaints'
+          : `https://helpforyou-backend.onrender.com/api/complaints?district=${district}`;
       } else {
-        endpoint = 'http://localhost:5000/api/cyber-complaints';
+        endpoint = 'https://helpforyou-backend.onrender.com/api/cyber-complaints';
       }
 
       const response = await axios.get(endpoint);
@@ -124,8 +124,8 @@ const DepartmentDashboard = () => {
     try {
       const isPoliceComplaint = complaintId.startsWith('POL');
       const endpoint = isPoliceComplaint 
-        ? `http://localhost:5000/api/complaints/update-status/${complaintId}`
-        : `http://localhost:5000/api/cyber-complaints/update-status/${complaintId}`;
+        ? `https://helpforyou-backend.onrender.com/api/complaints/update-status/${complaintId}`
+        : `https://helpforyou-backend.onrender.com/api/cyber-complaints/update-status/${complaintId}`;
 
       const token = localStorage.getItem('token');
       await axios.put(endpoint, { 
