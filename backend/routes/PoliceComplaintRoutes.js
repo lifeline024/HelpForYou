@@ -544,7 +544,7 @@ const getStatusEmailTemplate = (complaint, status, reason = "") => {
             ` : ''}
           </div>
           
-          <a href="http://localhost:5173/check-complaint-status" class="button">
+          <a href="https://helpforyou-frontend.onrender.com/check-complaint-status" class="button">
             Check Complaint Status
           </a>
         </div>
