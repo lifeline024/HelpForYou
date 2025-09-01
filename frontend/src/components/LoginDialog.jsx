@@ -42,7 +42,7 @@ export default function LoginDialog({ onClose, onShowReset, onLoginSuccess }) {
     
     try {
       setLoading(true);
-      const res = await axios.post("http://localhost:5000/api/users/login", { email, password });
+      const res = await axios.post("https://helpforyou-backend.onrender.com/api/users/login", { email, password });
       setStep("otp");
       setErrors({});
     } catch (err) {
@@ -62,7 +62,7 @@ export default function LoginDialog({ onClose, onShowReset, onLoginSuccess }) {
 
     try {
       setLoading(true);
-      const res = await axios.post("http://localhost:5000/api/users/verify-otp", { email, otp });
+      const res = await axios.post("https://helpforyou-backend.onrender.com/api/users/verify-otp", { email, otp });
 
       // Encrypt sensitive data before storing
       const encryptedToken = blockchainEncryption.encryptData(res.data.token);
@@ -114,7 +114,7 @@ export default function LoginDialog({ onClose, onShowReset, onLoginSuccess }) {
 
   const handleResendOtp = async () => {
     try {
-      await axios.post("http://localhost:5000/api/users/resend-otp", { email });
+      await axios.post("https://helpforyou-backend.onrender.com/api/users/resend-otp", { email });
       alert("OTP has been resent to your email!");
     } catch (err) {
       setErrors({ submit: err.response?.data?.message || "Failed to resend OTP" });
