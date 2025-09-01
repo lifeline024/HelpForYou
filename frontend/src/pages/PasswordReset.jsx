@@ -10,7 +10,7 @@ function PasswordResetRequest() {
     e.preventDefault();
     setIsLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/api/users/forgot-password", { email });
+      const res = await axios.post("https://helpforyou-backend.onrender.com/api/users/forgot-password", { email });
       setMessage(res.data.message);
     } catch (err) {
       setMessage(err.response?.data?.message || "Error sending reset email");
