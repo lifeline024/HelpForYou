@@ -23,7 +23,7 @@ const MyCyberComplaints = () => {
         return;
       }
       const res = await fetch(
-        "http://localhost:5000/api/cyber-complaints/my-complaints",
+        "https://helpforyou-backend.onrender.com/api/cyber-complaints/my-complaints",
         { headers: { Authorization: `Bearer ${token}` } }
       );
       const data = await res.json();
