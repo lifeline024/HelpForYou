@@ -174,7 +174,7 @@ router.post("/login", async (req, res) => {
             
             <p>If you didn't request this code, please ignore this email or contact support if you have concerns.</p>
             
-            <a href="http://localhost:5173" class="button">Go to HelpForYou</a>
+            <a href="https://helpforyou-frontend.onrender.com" class="button">Go to HelpForYou</a>
           </div>
           
           <div class="footer">
@@ -538,15 +538,15 @@ router.post("/verify-otp", async (req, res) => {
             
             <p class="warning">If this wasn't you, please secure your account immediately by resetting your password.</p>
             
-            <a href="http://localhost:5173/change-password" class="button">Secure My Account</a>
+            <a href="https://helpforyou-frontend.onrender.com/change-password" class="button">Secure My Account</a>
           </div>
           
           <div class="footer">
             <p>This is an automated security alert from HelpForYou. Please do not reply to this email.</p>
             <div class="footer-links">
-              <a href="http://localhost:5173/help">Help Center</a>
-              <a href="http://localhost:5173/privacy">Privacy Policy</a>
-              <a href="http://localhost:5173/contact">Contact Support</a>
+              <a href="https://helpforyou-frontend.onrender.com/help">Help Center</a>
+              <a href="https://helpforyou-frontend.onrender.com/privacy">Privacy Policy</a>
+              <a href="https://helpforyou-frontend.onrender.com/contact">Contact Support</a>
             </div>
             <p>© ${new Date().getFullYear()} HelpForYou. All rights reserved.</p>
             <p>Design and Developed By Aayush Shivastava</p>
@@ -593,7 +593,7 @@ router.post("/forgot-password", async (req, res) => {
       { expiresIn: "15m" }
     );
 
-    const resetLink = `http://localhost:5173/reset-password/${resetToken}`;
+    const resetLink = `https://helpforyou-frontend.onrender.com/reset-password/${resetToken}`;
 
     const resetPasswordHtml = `
       <!DOCTYPE html>
